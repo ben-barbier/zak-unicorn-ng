@@ -1,0 +1,10 @@
+:host {
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+app-unicorn-card {
+    margin: 5px;
+}

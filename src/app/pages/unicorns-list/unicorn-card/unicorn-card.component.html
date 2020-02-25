@@ -1,0 +1,28 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <img mat-card-avatar [src]="unicorn.photo" alt="🦄">
+        <mat-card-title (click)="setNameToUppercase()">{{ unicorn.name }}</mat-card-title>
+        <mat-card-subtitle>Id: {{ unicorn.id }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="unicorn.photo" alt="🦄">
+    <mat-card-content>
+        <div>birthyear: {{ unicorn.birthyear }}</div>
+        <div>capacities: {{ unicorn.capacityLabels }}</div>
+        <div>hobbies: {{ unicorn.hobbies }}</div>
+        <div>weight: {{ unicorn.weight }}</div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-mini-fab [color]="isInCart?'accent':'primary'" (click)="toggleToCart()">
+            <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary">
+            <mat-icon>visibility</mat-icon>
+        </button>
+        <button mat-mini-fab color="primary">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-mini-fab color="warn" (click)="delete()">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>

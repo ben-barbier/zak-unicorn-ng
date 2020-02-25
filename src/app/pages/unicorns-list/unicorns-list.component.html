@@ -1,0 +1,5 @@
+<app-unicorn-card
+    *ngFor="let unicorn of unicorns"
+    [unicorn]="unicorn"
+    (removed)="removeUnicornFromList(unicorn)"
+></app-unicorn-card>
